@@ -7,12 +7,40 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>novo-aviso</ion-title>
+    <ion-title>Novo Aviso</ion-title>
   </ion-navbar>
 
 </ion-header>
 
+<ion-item>
+    <ion-label floating>Titulo</ion-label>
+    <ion-input></ion-input>
+</ion-item>
 
-<ion-content padding>
+<ion-list>
 
-</ion-content>
+  <ion-item>
+    <ion-label>Tipo</ion-label>
+    <ion-select multiple="false">
+      <ion-option>Avisos Gerais</ion-option>
+      <ion-option>Gestão de pessoas</ion-option>
+      <ion-option>Presidência</ion-option>
+      <ion-option>Financeiro</ion-option>
+      <ion-option>Marketing</ion-option>
+      <ion-option>Projetos</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Titulo</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-textarea class="textarea_css" placeholder="Entre com a descrição do aviso." elastic [(ngModel)]="noteContent"></ion-textarea>
+  </ion-item>
+
+  <div padding>
+    <button block>Criar</button>
+  </div>
+</ion-list>

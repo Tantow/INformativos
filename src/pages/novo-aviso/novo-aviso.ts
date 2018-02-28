@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, Directive } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
@@ -13,13 +13,24 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   selector: 'page-novo-aviso',
   templateUrl: 'novo-aviso.html',
 })
+
+@Directive({
+  selector: '[elastic]'
+})
+
 export class NovoAvisoPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public element:ElementRef ) {
+    this.element = element;
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad NovoAvisoPage');
   }
+
+  ngAfterViewInit(){
+    this.element.nativeElement.querySelector("textarea").style.height = "100%";
+  }
+
 
 }
