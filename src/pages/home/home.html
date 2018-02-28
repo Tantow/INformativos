@@ -7,15 +7,17 @@
 </ion-header>
 
 <ion-slides pager>
-  <ion-slide class="scroll" *ngFor='let conteudo of conteudos'>
-    <ion-card *ngFor='let conteudo of conteudos'>
+  <!-- <ion-list>
+    <button ion-item *ngFor='let tweet of tweets' (click)="goToBrasil(tweet)">{{tweet.conteudo}}</button>
+  </ion-list> -->
+  <ion-slide *ngFor='let aviso of avisos'>
+    <ion-card *ngFor='let aviso of avisos'>
       <ion-card-header>
-        <h1>{{conteudo.nome}}</h1>
+        <h1>{{aviso.id}}</h1>
       </ion-card-header>
       <ion-card-content>
-        {{conteudo.desc}} 
-      </ion-card-content> 
+        {{aviso.conteudo}}
+      </ion-card-content>
     </ion-card>
-  </ion-slide>  
-
+  </ion-slide>
 </ion-slides>
