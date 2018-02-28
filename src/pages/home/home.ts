@@ -23,6 +23,9 @@ export class HomePage {
     this.getAviso();
 
   }
+  navega(){
+    this.navCtrl.push("NovoAvisoPage");
+  }
 
   ngOnInit(){
 
