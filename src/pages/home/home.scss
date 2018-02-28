@@ -1,7 +1,24 @@
+@font-face {
+  font-family: roboto;
+  src: url('Roboto-Regular.ttf');
+}
+
 .toolbar-background {
   background-color: color($colors, azul);
 }
 
-.title-md{
+.toolbar-title{
+  text-align: center;
   color: white;
+  font-family: roboto;
+  font-size: 1.5em;
+}
+
+.card-header-md{
+  font-family: roboto;
+  font-size: 1.3em;
+}
+
+.card-content-md{
+  text-transform: capitalize;
 }

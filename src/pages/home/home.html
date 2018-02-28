@@ -1,12 +1,97 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>
-      Avisos
+    <ion-title class="titulo">
+      Avisos Gerais
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <p>
-  </p>
-</ion-content>
+<ion-slides pager>
+
+  <ion-slide *ngFor='let conteudo of conteudos'>
+    <ion-card>
+      <ion-card-header>
+        <h1>{{conteudo.nome}}</h1>
+      </ion-card-header>
+      <ion-card-content>
+        {{conteudo.desc}} 
+      </ion-card-content>
+    </ion-card>
+  </ion-slide>  
+<!-- 
+  <ion-slide>
+    <ion-card>
+      <ion-card-header>
+        <h1>Aviso Geral</h1>
+      </ion-card-header>
+      <ion-card-content>
+        BatataBatataBatataBatataBatataBatataBatataBatataBatataBatata 
+      </ion-card-content>
+    </ion-card>
+  </ion-slide>
+
+  <ion-slide>
+    <ion-card>
+      <ion-card-header>
+        <h1>Aviso Presidência</h1>
+      </ion-card-header>
+      <ion-card-content>
+        BatataBatataBatataBatataBatataBatataBatataBatataBatataBatata 
+      </ion-card-content>
+    </ion-card>
+  </ion-slide>
+
+  <ion-slide>
+    <ion-card>
+      <ion-card-header>
+        <h1>Aviso GP</h1>
+      </ion-card-header>
+      <ion-card-content>
+        BatataBatataBatataBatataBatataBatataBatataBatataBatataBatata 
+      </ion-card-content>
+    </ion-card>
+  </ion-slide>
+
+  <ion-slide>
+    <ion-card>
+      <ion-card-header>
+        <h1>Aviso Financeiro</h1>
+      </ion-card-header>
+      <ion-card-content>
+        BatataBatataBatataBatataBatataBatataBatataBatataBatataBatata 
+      </ion-card-content>
+    </ion-card>
+  </ion-slide>
+
+  <ion-slide>
+    <ion-card>
+      <ion-card-header>
+        <h1>Aviso Projetos</h1>
+      </ion-card-header>
+      <ion-card-content>
+        BatataBatataBatataBatataBatataBatataBatataBatataBatataBatata 
+      </ion-card-content>
+    </ion-card>
+  </ion-slide>
+
+  <ion-slide>
+    <ion-card>
+      <ion-card-header>
+        <h1>Aviso Marketing</h1>
+      </ion-card-header>
+      <ion-card-content>
+        MarketingMarketingMarketingMarketingMarketingMarketingMarketing
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <h1 class="nome-aviso">Aviso Marketing 2</h1>
+      </ion-card-header>
+      <ion-card-content>
+        MarketingMarketingMarketingMarketingMarketingMarketingMarketing
+      </ion-card-content>
+    </ion-card>
+  </ion-slide> -->
+</ion-slides>
+
