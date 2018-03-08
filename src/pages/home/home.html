@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar class="home-navbar">
     <ion-title>
       Avisos Gerais <ion-icon name="md-add-circle" (click) = "navega()"></ion-icon>
     </ion-title>
@@ -7,17 +7,16 @@
 </ion-header>
 
 <ion-slides pager>
-  <!-- <ion-list>
-    <button ion-item *ngFor='let tweet of tweets' (click)="goToBrasil(tweet)">{{tweet.conteudo}}</button>
-  </ion-list> -->
-  <ion-slide *ngFor='let aviso of avisos'>
-    <ion-card *ngFor='let aviso of avisos'>
+
+  <ion-slide class="scroll" *ngFor='let aviso of avisos'>
+    <ion-card *ngFor='let aviso of avisos' class="card">
       <ion-card-header>
-        <h1>{{aviso.id}}</h1>
+        <h1 class="title-card">{{aviso.id}}</h1>
       </ion-card-header>
       <ion-card-content>
         {{aviso.conteudo}}
       </ion-card-content>
     </ion-card>
   </ion-slide>
+
 </ion-slides>

@@ -6,23 +6,29 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>Login</ion-title>
+  <ion-navbar class="login-navbar">
+    <ion-title class="login-title">Login</ion-title>
   </ion-navbar>
 
 </ion-header>
 
+<ion-content class="login-content">
 
-<ion-list>
+  <ion-img class="login-logo" src="../assets/imgs/injunior.png"></ion-img>
 
-  <ion-item>
-    <ion-input type="text" placeholder="Usuário"></ion-input>
-  </ion-item>
+  <ion-list class="login-list">
 
-  <ion-item>
-    <ion-input type="password" placeholder="Senha"></ion-input>
-  </ion-item>
+    <ion-item>
+      <ion-input type="text" placeholder="Usuário" class="login-input"></ion-input>
+    </ion-item>
 
-</ion-list>
-<button ion-button (click)="navega()">Login</button>
+    <ion-item>
+      <ion-input type="password" placeholder="Senha" class="login-input"></ion-input>
+    </ion-item>
+
+  </ion-list>
+  <button ion-button (click)="navega()" class="login-button">Login</button>
+
+</ion-content>
+
 

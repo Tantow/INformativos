@@ -3,7 +3,7 @@
   src: url('Roboto-Regular.ttf');
 }
 
-.toolbar-background {
+.home-navbar{
   background-color: color($colors, azul);
 }
 
@@ -14,16 +14,20 @@
   font-size: 1.5em;
 }
 
-.card-header-md{
+.card{
+  color: color($colors, dark);
+  background-color: #fcfcfc;
   font-family: roboto;
   font-size: 1.3em;
+  text-transform: capitalize;
 }
 
-.card-content-md{
-  text-transform: capitalize;
+.title-card{
+  color: #cc8400 !important;
 }
 
 .scroll{
   overflow-y: scroll;
-  padding-top: 200px;
+  padding-top: 440px;
+  background-color: #ccc;
 }
