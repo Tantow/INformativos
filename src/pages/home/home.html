@@ -11,10 +11,10 @@
   <ion-slide class="scroll" *ngFor='let aviso of avisos'>
     <ion-card *ngFor='let aviso of avisos' class="card">
       <ion-card-header>
-        <h1 class="title-card">{{aviso.id}}</h1>
+        <h1 class="title-card">{{aviso.title}}</h1>
       </ion-card-header>
       <ion-card-content>
-        {{aviso.conteudo}}
+        {{aviso.description}}
       </ion-card-content>
     </ion-card>
   </ion-slide>

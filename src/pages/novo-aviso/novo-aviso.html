@@ -12,35 +12,31 @@
 
 </ion-header>
 
-<ion-item>
-    <ion-label floating>Titulo</ion-label>
-    <ion-input></ion-input>
-</ion-item>
+<form (ngSubmit)="saveAviso(aviso)">
+  <ion-list>
+    <ion-item class="attribute-tipe">
+      <ion-label>Tipo</ion-label>
+      <ion-select multiple="false" [(ngModel)]="aviso.directorship_id" name="directorship_id">
+        <ion-option [value]=6>Avisos Gerais</ion-option>
+        <ion-option [value]=1>Gestão de pessoas</ion-option>
+        <ion-option [value]=2>Presidência</ion-option>
+        <ion-option [value]=3>Financeiro</ion-option>
+        <ion-option [value]=4>Marketing</ion-option>
+        <ion-option [value]=5>Projetos</ion-option>
+      </ion-select>
+    </ion-item>
 
-<ion-list>
+    <ion-item>
+      <ion-label floating>Titulo</ion-label>
+      <ion-input [(ngModel)]="aviso.title" name="title"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-textarea class="textarea_css" placeholder="Entre com a descrição do aviso." elastic [(ngModel)]="aviso.description" name="description"></ion-textarea>
+    </ion-item>
 
-  <ion-item>
-    <ion-label>Tipo</ion-label>
-    <ion-select multiple="false">
-      <ion-option>Avisos Gerais</ion-option>
-      <ion-option>Gestão de pessoas</ion-option>
-      <ion-option>Presidência</ion-option>
-      <ion-option>Financeiro</ion-option>
-      <ion-option>Marketing</ion-option>
-      <ion-option>Projetos</ion-option>
-    </ion-select>
-  </ion-item>
-
-  <ion-item>
-    <ion-label floating>Titulo</ion-label>
-    <ion-input></ion-input>
-  </ion-item>
-
-  <ion-item>
-    <ion-textarea class="textarea_css" placeholder="Entre com a descrição do aviso." elastic [(ngModel)]="noteContent"></ion-textarea>
-  </ion-item>
-
-  <div padding>
-    <button block>Criar</button>
-  </div>
-</ion-list>
+    <div padding>
+      <button ion-button type="submit" block>Criar</button>
+    </div>
+  
+  </ion-list>
+</form>

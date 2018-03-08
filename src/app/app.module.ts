@@ -9,6 +9,7 @@ import { LoginPage } from '../pages/login/login';
 import { HomePage } from '../pages/home/home';
 import { AvisosProvider } from '../providers/avisos/avisos';
 import { HttpClientModule } from '@angular/common/http';
+import { DiretoriasProvider } from '../providers/diretorias/diretorias';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { HttpClientModule } from '@angular/common/http';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    AvisosProvider
+    AvisosProvider,
+    DiretoriasProvider
   ]
 })
 export class AppModule {}

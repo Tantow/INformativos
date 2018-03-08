@@ -1,5 +1,6 @@
 import { Component, ElementRef, Directive } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { AvisosProvider } from '../../providers/avisos/avisos';
 
 /**
  * Generated class for the NovoAvisoPage page.
@@ -20,7 +21,9 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 export class NovoAvisoPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public element:ElementRef ) {
+  aviso = {title: '', description: '', directorship_id: ''};
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public element:ElementRef, public avisosProvider:AvisosProvider ) {
     this.element = element;
   }
 
@@ -32,5 +35,9 @@ export class NovoAvisoPage {
     this.element.nativeElement.querySelector("textarea").style.height = "100%";
   }
 
-
+  saveAviso(aviso) {
+    this.avisosProvider.saveAviso(this.aviso).then((result) => {
+      console.log(result);}, (err) => {
+        console.log(err);});
+  }
 }
